@@ -6,6 +6,7 @@ const initialState = {
 export default function ProductReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_PRODUCTS':
+            console.log(action)
             return {...state, products: action.products }
         case 'SET_CURR_PRODUCT':
             return {...state, currProduct: action.product }
@@ -25,7 +26,6 @@ export default function ProductReducer(state = initialState, action) {
                 })
             }
         case 'ADD_PRODUCT':
-            debugger;
             return {
                 ...state,
                 products: [...state.products, action.product]

@@ -1,22 +1,21 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
+import LoginPage from "../pages/LoginPage.jsx";
 
 class About extends Component {
   render() {
     return (
       <div>
         <h2>ABOUT US</h2>
-        {this.props.greetMsg}
+        <LoginPage></LoginPage>
+        {/* {this.props.greetMsg} */}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  return {
-    greetMsg: state.app.msg,
-    counter: state.app.counter,
-  };
+  return {};
 };
 
 const mapDispatchToProps = {};

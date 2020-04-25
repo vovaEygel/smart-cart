@@ -28,9 +28,6 @@ export default {
 async function ajax(endpoint, method = 'get', data = null) {
     try {
         const res = await axios({
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            },
             url: `${BASE_URL}${endpoint}`,
             method,
             data
@@ -38,9 +35,9 @@ async function ajax(endpoint, method = 'get', data = null) {
         return res.data;
     } catch (err) {
         console.log(err)
-            // if (err.response.status === 401) {
-            //     console.log('error')
-            // }
+        if (err.response.status === 401) {
+            console.log('error')
+        }
     }
 }
 

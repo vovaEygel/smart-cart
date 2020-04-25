@@ -1,13 +1,14 @@
 .Header {
+    align-self: center;
+    background-color: $clr4;
+    color: red;
+    height: rem(50px);
     .logo,
     a {
         color: white;
         text-decoration: none;
+        display: inline-block;
     }
-    align-self: center;
-    background-color: rgb(0, 132, 255);
-    color: red;
-    height: rem(50px);
     .logo {
         line-height: rem(50px);
         margin-left: rem(10px);
@@ -18,10 +19,13 @@
             padding: 0 10px;
             display: inline-block;
             line-height: rem(48px);
-            // margin: 0 rem(10px);
         }
         .nav-link:hover {
-            border-bottom: 2px solid rgb(224, 0, 0);
+            border-bottom: 2px solid $clr6;
+            color: $clr2;
+        }
+        a:hover {
+            color: $clr4;
         }
     }
 }

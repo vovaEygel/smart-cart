@@ -1,4 +1,4 @@
-import { ProductService } from '../../service/product.Service.js'
+import { ProductService } from '../../service/product.service.js'
 
 
 
@@ -6,7 +6,9 @@ import { ProductService } from '../../service/product.Service.js'
 export function loadProducts(filterBy) {
     return async dispatch => {
         const products = await ProductService.query();
-        dispatch({ type: 'SET_PRODUCTS', products })
+        //update the products state
+        let x = dispatch({ type: 'SET_PRODUCTS', products })
+        console.log(x)
     }
 }
 
